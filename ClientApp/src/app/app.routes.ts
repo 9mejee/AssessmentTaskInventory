@@ -6,9 +6,6 @@ import { ViewComponent } from './Product/view/view.component';
 
 export const routes: Routes = [
 
-    { path: "Product", redirectTo: "Product/index", pathMatch: "full" },
-    { path: "Product/index", component: IndexComponent },
-    { path: "Product/create", component: CreateComponent },
-    { path: "Product/edit", component: EditComponent },
-    { path: "Product/view", component: ViewComponent },
+    { path: "/", redirectTo: "product", pathMatch: "full" },
+    { path: "product", loadChildren:() => ("..") },
 ];
